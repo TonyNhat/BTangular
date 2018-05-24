@@ -1,0 +1,100 @@
+:host{
+    width: 100%;
+    min-height: 500px;
+    .content{
+        width: 84%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        transition: 0.5s;
+        h1 {
+            font-family: 'Sunflower', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333333ad;
+        }
+        .menu-list{
+            display: flex;
+            .search, .two-menu, .list{
+                display: inline-block;
+            }
+            .two-menu, .search{
+                border: 2px solid #33333366;
+                border-radius: 2em;
+                box-shadow: 1px 3px 9px 0 rgba(0,0,0,.2);
+            }
+            .two-menu{
+                overflow: hidden;
+            }
+            img{
+                height: 24px;
+                width: 24px;
+                cursor:pointer;
+                transition:0.5s;
+            }
+            .search{
+                padding: 5px 12px;
+                margin-right: 20px;
+                input{
+                    border: none;
+                    height: 29px;
+                    float: right;
+                    padding-left: 15px;
+                    font-size: 20px;
+                    outline: none;
+                    width: 0;
+                    transition: 0.5s;
+                }
+            }
+            .search:hover input{
+                width:250px;
+            }
+            .list{
+                padding:5px 20px;
+                
+            }
+            .list.menu-list-1st,.list.menu-list-2nd{ 
+                transition: 0.15s;
+                cursor: pointer;
+                height: 100%;
+            }
+            .list.menu-list-1st{
+                border-right: 0.5px solid rgb(202, 198, 198);
+            }
+            .list.menu-list-2nd{
+                border-left: 0.5px solid rgb(202, 198, 198);
+            }
+            .list.menu-list-1st.active, .list.menu-list-2nd.active{
+                background:#333333a6
+            } 
+        } 
+    }
+    .list-books{
+        width: 84%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        text-align: center;
+        .box{
+            background: #3333330d;
+            width: 24%;
+            padding: 15px;
+            padding-bottom: 0;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: 0.5s;
+            margin-right: 3.5%;
+            margin-left: 3.5%;
+        }
+        .box.list {
+            width: 100% !important;
+            height: 500px;
+            text-align: left !important;
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<div class="logo">
+  <img src="assets/logo.png">
+</div>
+
+<div class="menu">
+  <div class="menu-book">
+    <ul>
+      <li><a href="#">E-BOOKS</a></li>
+      <li><a href="#">CLASS</a></li>
+    </ul>
+  </div>
+ 
+  <div class="menu-user">
+    <ul>
+      <li><a href="#">LOG IN</a></li>
+      <li><a href="#">SIGN UP</a></li>
+    </ul>
+  </div>
+
+  <div [ngClass]="['menu-search',showInput? 'active' : '']">
+    <img src="assets/Icon/find.png" (click) = "showInput = !showInput">
+    <input type="text" id="search" name="search-input" placeholder="Search something...">
+</div>
+
+</div>

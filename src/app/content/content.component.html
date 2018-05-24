@@ -1,0 +1,25 @@
+<div class=content>
+  <h1>POPULAR E-BOOKS</h1>
+
+  <div class="menu-list">
+    <div class="search">
+      <img src="assets/Icon/find.png">
+      <input [(ngModel)] = "filterBook" name="search-input" placeholder="search something..."/>
+    </div>
+
+    <div classs="two-menu">
+      <div class="list menu-list-1st {{ changed? '' : 'active' }}">
+        <img src="assets/Icon/menu-list.png" (click)="changeListView(false);"/>
+      </div>
+      <div class="list menu-list-2nd {{ changed? 'active' : '' }}" (click)="changeListView(true);">
+        <img src="assets/Icon/menu-ngang.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="list-books">
+  <div [ngClass]="['box',isViewList? 'list' : '']" *ngFor="let book of books | filter : filterBook">
+    <app-book [book] ="book"></app-book>
+  </div>
+</div>
